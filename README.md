@@ -1,9 +1,9 @@
-Project Overview
+Project Overview:
 
 This project automates the search functionality validation on the Selenium Playground Table Search Demo. 
 Using Selenium WebDriver and pytest, it ensures that searching for 'New York' returns the correct results.
 
- Key Features
+Key Features:
 
 Automated Search Validation: Ensures the search feature works as expected.
 
@@ -39,7 +39,7 @@ Verify that all displayed rows contain "New York".
 
 Assert test success if conditions are met, otherwise fail.
 
-Best Practices
+Best Practices:
 
 Follow PEP8 Guidelines: Ensure code readability and maintainability.
 
@@ -55,7 +55,7 @@ Use Headless Mode for CI/CD: Enables seamless integration in automation pipeline
 
 Regularly Update Dependencies: Keeps WebDriver and browser versions compatible.
 
-Tech Stack
+Tech Stack:
 
 Programming Language: Python (3.8+ recommended)
 
@@ -65,7 +65,7 @@ Testing Framework: pytest
 
 Browser Driver: ChromeDriver (Chrome), extendable for Firefox
 
- Project Structure
+ Project Structure:
 
 📦 project
 
@@ -73,7 +73,7 @@ Browser Driver: ChromeDriver (Chrome), extendable for Firefox
  ┣  README.md            
  ┗ requirements.txt     
 
-Prerequisites
+Prerequisites:
 
 Ensure the following are installed on your system:
 
@@ -83,11 +83,10 @@ pip (Python package manager)
 
 ChromeDriver(for Chrome)
 
-Installation & Setup
-
-Clone the Repository:
+Installation & Setup Clone the Repository:
 
 git clone https://github.com/pallavi-narsing/selenium-search-validation.git
+
 cd selenium-search-validation
 
 Install Required Dependencies:
@@ -102,13 +101,13 @@ Verify Installation:
 
 chromedriver --version
 
-Running the Test
+Running the Test:
 
 To execute the test script, navigate to the project directory and run:
 
 pytest qa_selenium_test.py
 
-Expected Output
+Expected Output:
 
 The script will open the Selenium Playground Table Search Demo.
 
@@ -116,7 +115,7 @@ It will search for "New York" and validate the results.
 
 The test will pass if exactly 5 results are displayed, each containing "New York".
 
-Troubleshooting
+Troubleshooting:
 
 WebDriver Exception: Ensure ChromeDriver is correctly installed and added to PATH.
 
@@ -124,7 +123,7 @@ Test Fails Due to Element Not Found: Verify that the website structure hasn’t 
 
 Browser Not Opening: Ensure Selenium and WebDriver versions are compatible.
 
-Future Enhancements
+Future Enhancements:
 
 Add support for Firefox WebDriver.
 
@@ -132,6 +131,6 @@ Implement data-driven testing using external test data.
 
 Integrate CI/CD pipelines for automated execution.
 
-Author
-Pallavi 
+Author:
+ Pallavi 
 
