@@ -7,13 +7,11 @@ from selenium.webdriver.common.keys import Keys
 # Ensure SSL module is properly loaded
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# URL of the Selenium Playground Table Search Demo
 URL = "https://www.lambdatest.com/selenium-playground/table-sort-search-demo"
 
 
 @pytest.fixture(scope="module")
 def browser():
-    """Setup and teardown for the browser instance."""
     options = webdriver.ChromeOptions()
     options.add_argument('--ignore-certificate-errors')
     driver = webdriver.Chrome(options=options)  # Ensure ChromeDriver is installed
@@ -23,8 +21,6 @@ def browser():
 
 
 def test_search_functionality(browser):
-    """Test to validate the search functionality on the table search demo."""
-    # Navigate to the URL
     browser.get(URL)
 
     # Locate the search input box and enter 'New York'
@@ -34,7 +30,6 @@ def test_search_functionality(browser):
     # Wait for results to load
     browser.implicitly_wait(5)
 
-    # Verify that 5 results are displayed
     rows = browser.find_elements(By.XPATH, "//table[@id='example']/tbody/tr")
     assert rows, "No search results found, expected at least one result."
     assert len(rows) == 5, f"Expected 5 results, but got {len(rows)}"
@@ -44,6 +39,4 @@ def test_search_functionality(browser):
         assert "New York" in row.text, f"Row does not contain 'New York': {row.text}"
 
     print("Test passed: Search functionality works correctly.")
-
-
 
