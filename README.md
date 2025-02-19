@@ -68,6 +68,7 @@ Browser Driver: ChromeDriver (Chrome), extendable for Firefox
  Project Structure
 
 📦 project
+
  ┣ qa_selenium_test.py   
  ┣  README.md            
  ┗ requirements.txt     
